@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "engine": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "sequelize": "^5.21.6",
@@ -15,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prem0406/task-and-notes-manager.git"
+    "url": "git+https://github.com/developervipul/TaskManager.git"
   },
   "bugs": {
-    "url": "https://github.com/prem0406/task-and-notes-manager/issues"
+    "url": "https://github.com/developervipul/TaskManager/issues"
   },
-  "homepage": "https://github.com/prem0406/task-and-notes-manager#readme",
+  "homepage": "https://github.com/developervipul/TaskManager#readme",
   "description": ""
 }
