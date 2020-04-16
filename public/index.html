@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task and Notes Managers</title>
+    <link rel="stylesheet" href="style.css">
+    <script async defer src="script.js"></script>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <div class="container" >
+       
+        <form action="/">
+            <label >Task Title</label>
+                    <input type="text" id="inputTask" placeholder="Task Name" required>
+
+        <div class="innerContainer">
+
+            <div class="divDueDate">
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" >
+            </div>
+            
+            <div class="divPriority">
+                <label for="priority">Choose Priority:</label>
+
+                <select id="priority">
+                <option value="HIGH">High</option>
+                <option selected="selected" value="MEDIUM">Medium</option>
+                <option value="LOW">Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="innerContainer">
+            <textarea id="desc" placeholder="Description(Optional)"></textarea>
+
+            <textarea id="notes" placeholder="Notes"></textarea>
+        </div>
+        <button type="submit" id="submit">ADD</button>
+        </form>
+
+        <br>
+        <br>
+        <h3>Tasks List</h3>
+
+        <table id="tasklist">
+            <tr>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+
+                $('#tasklist').on('click', 'tr.mainRow',function(){
+                $(this).nextUntil('tr.mainRow').slideToggle(200);
+            });
+        });
+    </script>
+</body>
+</html>
